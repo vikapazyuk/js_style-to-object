@@ -6,11 +6,11 @@
  * @return {object}
  */
 function convertToObject(sourceString) {
+  const result = {};
   const cleanedStyles = sourceString
     .split(';')
     .map((style) => style.trim())
     .filter(Boolean);
-  const result = {};
 
   cleanedStyles.forEach((style) => {
     const colonIndex = style.indexOf(':');
